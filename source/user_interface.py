@@ -29,3 +29,25 @@ def get_input_file() :
             print("")
             print("  [ERROR] File \'" + input_path + "\' doesn`t exist")
             input_path = input("  Enter the path to the input file : ")
+
+def get_output_file() :
+    output_file = input("  Enter the path to the output file : ")
+    print("")
+
+    return output_file
+
+def choose_option(choose_name, options_list) :
+    print("  " + choose_name + " :")
+    for i in range(len(options_list)) :
+        print("  \t" + str(i + 1) + ". " + options_list[i])
+
+    print("")
+
+    while True :
+        answer = int(input("  Enter your answer : "))
+
+        if answer <= 0 or answer > len(options_list) :
+            print("  [ERROR] Incorrect number. Try again")
+            print("")
+        else :
+            return answer
