@@ -1,4 +1,5 @@
 import user_interface
+import resourcer
 
 if __name__ == "__main__" :
     user_interface.print_hello()
@@ -15,3 +16,5 @@ if __name__ == "__main__" :
              "D-style unsigned array\t(ubyte [] arr)"])
 
     arr_name = user_interface.get_array_name()
+
+    resourcer.resourcer(input_file, output_file, out_type, arr_name)

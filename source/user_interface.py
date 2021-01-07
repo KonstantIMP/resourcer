@@ -50,6 +50,7 @@ def choose_option(choose_name, options_list) :
             print("  [ERROR] Incorrect number. Try again")
             print("")
         else :
+            print("")
             return answer
 
 def get_array_name() :
@@ -60,4 +61,5 @@ def get_array_name() :
             print("  [ERROR] Incorrect array name")
             print("")
         else :
+            print("")
             return name
