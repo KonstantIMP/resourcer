@@ -51,3 +51,13 @@ def choose_option(choose_name, options_list) :
             print("")
         else :
             return answer
+
+def get_array_name() :
+    while True :
+        name = input("  Enter name for data array : ")
+
+        if name.count(' ') or name.count('\t') or name.count('\\') or name.count('#') :
+            print("  [ERROR] Incorrect array name")
+            print("")
+        else :
+            return name

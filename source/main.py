@@ -13,3 +13,5 @@ if __name__ == "__main__" :
              "C++-style unsigned array\t(std::uint8_t arr [])",
              "D-style signed array\t\t(byte [] arr)",
              "D-style unsigned array\t(ubyte [] arr)"])
+
+    arr_name = user_interface.get_array_name()
