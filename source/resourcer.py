@@ -41,10 +41,10 @@ def resourcer(input_f, output_f, arr_style, arr_name) :
 
     counter = 0
 
-    with open(input_f, "r") as inp :
+    with open(input_f, "rb") as inp :
         while True :
             byte = inp.read(1)
-            if byte == "" : break
+            if len(byte) == 0 : break
 
             if counter != 0 and counter % 16 == 0 : out.write(",\n    ")
             elif counter != 0 : out.write(', ')
@@ -52,9 +52,7 @@ def resourcer(input_f, output_f, arr_style, arr_name) :
             out.write(dec_to_hex(ord(byte)))
             counter = counter + 1
 
-    if arr_style == 1 or arr_style == 2 :
-        out.write("\n};\n")
-    elif arr_style == 3 or arr_style == 4:
-        out.write("\n};\n")
+    if arr_style == 1 or arr_style == 2 or arr_style == 3 or arr_style == 4 :
+        out.write(", 0x00\n};\n")
     else :
-        out.write("\n];\n")
+        out.write(", 0x00\n];\n")
